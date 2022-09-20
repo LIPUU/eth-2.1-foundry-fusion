@@ -1,0 +1,377 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158207b78eaa7408969adc22fffe427b7acb87e729654bbc48659f1644ec44e04b0d064736f6c63430005110032",
+    "sourceMap": "290:17:23:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;290:17:23;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052600080fdfea265627a7a723158207b78eaa7408969adc22fffe427b7acb87e729654bbc48659f1644ec44e04b0d064736f6c63430005110032",
+    "sourceMap": "290:17:23:-;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/upgrade/EthCrossChainManager.sol\":\"empty\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/AdminUpgradeabilityProxy.sol\":{\"keccak256\":\"0x10ce81d835a4776c23f72c9abe8f65cd806352034d2fa9ebe7a42868a1ad7b22\",\"urls\":[\"bzz-raw://096dc2c9c1def99f1b3e2bb766cb2c7c3dbdf34b8b41f58ad1fd03ec2f168aad\",\"dweb:/ipfs/QmQ3gQaM8zgge4o2hgrKMeVpGsymLHpur4pQQewAP8UGLd\"]},\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/BaseAdminUpgradeabilityProxy.sol\":{\"keccak256\":\"0xbf8ee1cf63a430a3eb8b39a9145d0d133400b8db06fa9fd33056597f7d8ceb25\",\"urls\":[\"bzz-raw://58dc9f7b607b235e9efae48b003bf43aacb1b034853b8ead82830834405904a6\",\"dweb:/ipfs/QmXqDDwV8vpufd6Xka5zYrxrSgbnfzrQTSMoN7dPTAHJ21\"]},\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/BaseUpgradeabilityProxy.sol\":{\"keccak256\":\"0x1b37f808dc0a45976ad23aa53908c485a74a4d9fbd03066a5ab399c46436e570\",\"urls\":[\"bzz-raw://de04959e1261bbc2ee53a88b98469a888a2f2fa49c07ea87a5d646a8fe438558\",\"dweb:/ipfs/QmUmYQaNnAMfvbfKLniFLHyBzsH77bCMf9NpNSfndfuqWh\"]},\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/Proxy.sol\":{\"keccak256\":\"0xd8074ae5fa7ee6384ca8196a896612fb044bbf4ff4b7336d03cd97845000ac21\",\"urls\":[\"bzz-raw://3a111e1dc777d80e6c2ad41c6ff2bfb3ae8f61658fd6580ddf9ba9ab0d25a354\",\"dweb:/ipfs/QmSfwvUqqiownzHeMmUiYkejWs6FXR2KLtHQnSzP6FivTj\"]},\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/UpgradeabilityProxy.sol\":{\"keccak256\":\"0xb02c6349ba01df9902857b6058f92b37f13187775cce9da74f6f28410205445b\",\"urls\":[\"bzz-raw://f05434b5110c9de912e001a5dc2b252947f474346cb8ea5ec26ea2efe7143aa7\",\"dweb:/ipfs/QmbaksVa6vQz926TCHgJniKFuod44QhuGzVFYMtdUgdxba\"]},\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/utils/Address.sol\":{\"keccak256\":\"0x7be7f8e4c08bc70ff9815e3f11c569f42aa3c447b5bc61fd75fb5cec97f63a9f\",\"urls\":[\"bzz-raw://f301a9226d637e1593916ba2de7b0b28c35f2adc3ca8526289fe1eedafa83bc2\",\"dweb:/ipfs/QmPb991LE8nyvhB4BkX46P1Pan2ijH9tfqWwLAz65VUUKs\"]},\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/upgrade/EthCrossChainManager.sol\":{\"keccak256\":\"0x182c4932d90efd1304c750191f16b1fedde0fce94b6d6ca9bbb8aaf5ca4c1fac\",\"urls\":[\"bzz-raw://5f7b7ed62587eae77760710205564c990da25e6876ee786e1e62cba2f36b4e21\",\"dweb:/ipfs/QmbnUMfHx2ZNhwhYFnZFqcukySWV3NYNSy49EwagKtvhi8\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.5.17+commit.d19bba13"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "methods": {}
+      },
+      "userdoc": {
+        "methods": {}
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "compilationTarget": {
+        "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/upgrade/EthCrossChainManager.sol": "empty"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/AdminUpgradeabilityProxy.sol": {
+        "keccak256": "0x10ce81d835a4776c23f72c9abe8f65cd806352034d2fa9ebe7a42868a1ad7b22",
+        "urls": [
+          "bzz-raw://096dc2c9c1def99f1b3e2bb766cb2c7c3dbdf34b8b41f58ad1fd03ec2f168aad",
+          "dweb:/ipfs/QmQ3gQaM8zgge4o2hgrKMeVpGsymLHpur4pQQewAP8UGLd"
+        ],
+        "license": null
+      },
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/BaseAdminUpgradeabilityProxy.sol": {
+        "keccak256": "0xbf8ee1cf63a430a3eb8b39a9145d0d133400b8db06fa9fd33056597f7d8ceb25",
+        "urls": [
+          "bzz-raw://58dc9f7b607b235e9efae48b003bf43aacb1b034853b8ead82830834405904a6",
+          "dweb:/ipfs/QmXqDDwV8vpufd6Xka5zYrxrSgbnfzrQTSMoN7dPTAHJ21"
+        ],
+        "license": null
+      },
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/BaseUpgradeabilityProxy.sol": {
+        "keccak256": "0x1b37f808dc0a45976ad23aa53908c485a74a4d9fbd03066a5ab399c46436e570",
+        "urls": [
+          "bzz-raw://de04959e1261bbc2ee53a88b98469a888a2f2fa49c07ea87a5d646a8fe438558",
+          "dweb:/ipfs/QmUmYQaNnAMfvbfKLniFLHyBzsH77bCMf9NpNSfndfuqWh"
+        ],
+        "license": null
+      },
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/Proxy.sol": {
+        "keccak256": "0xd8074ae5fa7ee6384ca8196a896612fb044bbf4ff4b7336d03cd97845000ac21",
+        "urls": [
+          "bzz-raw://3a111e1dc777d80e6c2ad41c6ff2bfb3ae8f61658fd6580ddf9ba9ab0d25a354",
+          "dweb:/ipfs/QmSfwvUqqiownzHeMmUiYkejWs6FXR2KLtHQnSzP6FivTj"
+        ],
+        "license": null
+      },
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/UpgradeabilityProxy.sol": {
+        "keccak256": "0xb02c6349ba01df9902857b6058f92b37f13187775cce9da74f6f28410205445b",
+        "urls": [
+          "bzz-raw://f05434b5110c9de912e001a5dc2b252947f474346cb8ea5ec26ea2efe7143aa7",
+          "dweb:/ipfs/QmbaksVa6vQz926TCHgJniKFuod44QhuGzVFYMtdUgdxba"
+        ],
+        "license": null
+      },
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/utils/Address.sol": {
+        "keccak256": "0x7be7f8e4c08bc70ff9815e3f11c569f42aa3c447b5bc61fd75fb5cec97f63a9f",
+        "urls": [
+          "bzz-raw://f301a9226d637e1593916ba2de7b0b28c35f2adc3ca8526289fe1eedafa83bc2",
+          "dweb:/ipfs/QmPb991LE8nyvhB4BkX46P1Pan2ijH9tfqWwLAz65VUUKs"
+        ],
+        "license": null
+      },
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/upgrade/EthCrossChainManager.sol": {
+        "keccak256": "0x182c4932d90efd1304c750191f16b1fedde0fce94b6d6ca9bbb8aaf5ca4c1fac",
+        "urls": [
+          "bzz-raw://5f7b7ed62587eae77760710205564c990da25e6876ee786e1e62cba2f36b4e21",
+          "dweb:/ipfs/QmbnUMfHx2ZNhwhYFnZFqcukySWV3NYNSy49EwagKtvhi8"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/upgrade/EthCrossChainManager.sol",
+    "id": 5067,
+    "exportedSymbols": {
+      "EthCrossChainManager": [
+        5065
+      ],
+      "empty": [
+        5066
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:307:23",
+    "nodes": [
+      {
+        "id": 5046,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23",
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 5047,
+        "nodeType": "ImportDirective",
+        "src": "25:61:23",
+        "absolutePath": "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/cross_chain_manager/libs/upgradeability/AdminUpgradeabilityProxy.sol",
+        "file": "../libs/upgradeability/AdminUpgradeabilityProxy.sol",
+        "scope": 5067,
+        "sourceUnit": 2802,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 5065,
+        "nodeType": "ContractDefinition",
+        "src": "88:200:23",
+        "nodes": [
+          {
+            "id": 5064,
+            "nodeType": "FunctionDefinition",
+            "src": "152:134:23",
+            "body": {
+              "id": 5063,
+              "nodeType": "Block",
+              "src": "279:7:23",
+              "statements": []
+            },
+            "documentation": null,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 5058,
+                    "name": "_logic",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5051,
+                    "src": "241:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 5059,
+                    "name": "_admin",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5053,
+                    "src": "249:6:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 5060,
+                    "name": "_data",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5055,
+                    "src": "257:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  }
+                ],
+                "id": 5061,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 5057,
+                  "name": "AdminUpgradeabilityProxy",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2801,
+                  "src": "216:24:23",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_AdminUpgradeabilityProxy_$2801_$",
+                    "typeString": "type(contract AdminUpgradeabilityProxy)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "216:47:23"
+              }
+            ],
+            "name": "",
+            "parameters": {
+              "id": 5056,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5051,
+                  "name": "_logic",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5064,
+                  "src": "164:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5050,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5053,
+                  "name": "_admin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5064,
+                  "src": "180:14:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5052,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "180:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5055,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5064,
+                  "src": "196:18:23",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 5054,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "196:5:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:52:23"
+            },
+            "returnParameters": {
+              "id": 5062,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:23"
+            },
+            "scope": 5065,
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5048,
+              "name": "AdminUpgradeabilityProxy",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2801,
+              "src": "121:24:23",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$2801",
+                "typeString": "contract AdminUpgradeabilityProxy"
+              }
+            },
+            "id": 5049,
+            "nodeType": "InheritanceSpecifier",
+            "src": "121:24:23"
+          }
+        ],
+        "contractDependencies": [
+          2801,
+          2957,
+          3015,
+          3164,
+          3598
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          5065,
+          2801,
+          3598,
+          2957,
+          3015,
+          3164
+        ],
+        "name": "EthCrossChainManager",
+        "scope": 5067
+      },
+      {
+        "id": 5066,
+        "nodeType": "ContractDefinition",
+        "src": "290:17:23",
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          5066
+        ],
+        "name": "empty",
+        "scope": 5067
+      }
+    ]
+  },
+  "id": 23
+}

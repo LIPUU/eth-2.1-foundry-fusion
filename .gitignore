@@ -5,6 +5,8 @@ build
 .idea
 hardhat.config.js
 
+foundry_dir/lib/forge-std
+
 node_modules
 /.project
 /.settings/

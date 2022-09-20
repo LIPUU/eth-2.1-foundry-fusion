@@ -1,0 +1,329 @@
+{
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "_toChainId",
+          "type": "uint64"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_toContract",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_method",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_txData",
+          "type": "bytes"
+        }
+      ],
+      "name": "crossChain",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "crossChain(uint64,bytes,bytes,bytes)": "bd5cf625"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"_toChainId\",\"type\":\"uint64\"},{\"internalType\":\"bytes\",\"name\":\"_toContract\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"_method\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"_txData\",\"type\":\"bytes\"}],\"name\":\"crossChain\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of the EthCrossChainManager contract for business contract like LockProxy to request cross chain transaction\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/swapProxy/interface/IEthCrossChainManager.sol\":\"IEthCrossChainManager\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/swapProxy/interface/IEthCrossChainManager.sol\":{\"keccak256\":\"0xdf7a4f9bedc2bfd94297b71f98fe6923566ea17dcf5b81411e870637517b2f07\",\"urls\":[\"bzz-raw://60aef73ce57c834cce18e2bd032209e7f99dd04f386c27b586774009bafe73b8\",\"dweb:/ipfs/QmemzD3WX4SasJouKdxt4iHDZGy58tF9E4ofhhUvsMQsk1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.5.17+commit.d19bba13"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "_toChainId",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_toContract",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_method",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_txData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "crossChain",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "methods": {}
+      },
+      "userdoc": {
+        "methods": {}
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "compilationTarget": {
+        "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/swapProxy/interface/IEthCrossChainManager.sol": "IEthCrossChainManager"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/swapProxy/interface/IEthCrossChainManager.sol": {
+        "keccak256": "0xdf7a4f9bedc2bfd94297b71f98fe6923566ea17dcf5b81411e870637517b2f07",
+        "urls": [
+          "bzz-raw://60aef73ce57c834cce18e2bd032209e7f99dd04f386c27b586774009bafe73b8",
+          "dweb:/ipfs/QmemzD3WX4SasJouKdxt4iHDZGy58tF9E4ofhhUvsMQsk1"
+        ],
+        "license": null
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "/home/lipu/crossChain2.1_with_foundry/eth-contracts/contracts/core/swapProxy/interface/IEthCrossChainManager.sol",
+    "id": 9218,
+    "exportedSymbols": {
+      "IEthCrossChainManager": [
+        9217
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "0:340:31",
+    "nodes": [
+      {
+        "id": 9203,
+        "nodeType": "PragmaDirective",
+        "src": "0:23:31",
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 9217,
+        "nodeType": "ContractDefinition",
+        "src": "160:179:31",
+        "nodes": [
+          {
+            "id": 9216,
+            "nodeType": "FunctionDefinition",
+            "src": "198:139:31",
+            "documentation": null,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "crossChain",
+            "parameters": {
+              "id": 9212,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9205,
+                  "name": "_toChainId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9216,
+                  "src": "218:17:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 9204,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "218:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9207,
+                  "name": "_toContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9216,
+                  "src": "237:26:31",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9206,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:5:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9209,
+                  "name": "_method",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9216,
+                  "src": "265:22:31",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9208,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "265:5:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9211,
+                  "name": "_txData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9216,
+                  "src": "289:22:31",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 9210,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:5:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "217:95:31"
+            },
+            "returnParameters": {
+              "id": 9215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9214,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9216,
+                  "src": "331:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9213,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "331:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "330:6:31"
+            },
+            "scope": 9217,
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface of the EthCrossChainManager contract for business contract like LockProxy to request cross chain transaction",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          9217
+        ],
+        "name": "IEthCrossChainManager",
+        "scope": 9218
+      }
+    ]
+  },
+  "id": 31
+}

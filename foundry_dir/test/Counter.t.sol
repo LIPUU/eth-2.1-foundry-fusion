@@ -1,23 +1,24 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
-import "../src/Counter.sol";
+import "forge-std/console.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+contract CCMTest is Test {
+    address deployer=vm.addr(1);
+    address add1=vm.addr(11);
+    address add2=vm.addr(111);
+    address eccd;
+    address factory;
     function setUp() public {
-       counter = new Counter();
-       counter.setNumber(0);
+        eccd= deployCode("EthCrossChainData.sol");
+        factory= deployCode("CallerFactory.sol",abi.encode(new address[](0)));
+        
     }
 
-    function testIncrement() public {
-        counter.increment();
-        assertEq(counter.number(), 1);
+    function testC()  public {
+        
     }
 
-    function testSetNumber(uint256 x) public {
-        counter.setNumber(x);
-        assertEq(counter.number(), x);
-    }
+
 }
