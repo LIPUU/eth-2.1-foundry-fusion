@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
-
-import "helper.sol";
+import "test/helper.sol";
 
 //  In order to be compatible with the previous hardhat test, two paths must be manually modified here, 
 //  first is the scriptPath in CCM.t.sol to the absolute variable in the script.sh script, 
@@ -23,11 +22,13 @@ contract CCMTest is Test {
     function setUp() public {
         vm.prank(deployer);
         eccd= deployCode("EthCrossChainData.sol");
-
+        
+        vm.prank(deployer);
         factory= deployCode("CallerFactory.sol",abi.encode(new address[](0)));
+        
         ccmi = deployCode("EthCrossChainManagerImplementation.sol");
 
-        new Helper().updateConst(eccd,factory,scriptPath);
+        // new Helper().updateConst(eccd,factory,scriptPath);
 
         ccmp=deployCode("EthCrossChainManager.sol",abi.encode(ccmi,deployer,""));
         
@@ -40,7 +41,10 @@ contract CCMTest is Test {
         msgGenerator=deployCode("callerMock.sol:CallerSigMsgGen");
         ethSignMsgGenerator=deployCode("callerMock.sol:EthSigMsgGen");
 
-        callerp=ICallerFactory(factory).deploy(111,calleriMock,addr1,"");
+        callerp=ICallerFactory(factory).deploy(111,calleriMock,addr1,abi.encodeWithSelector(bytes4(keccak256("initialize(address)")),ccmp));
+
+        // console.log("eccd address: %s",eccd);
+        // console.log("callerp address: %s",factory);
     }
 
     function testDeployCaller() public {
@@ -158,12 +162,43 @@ contract CCMTest is Test {
 
     function testCanCallCrossChainFromValidCaller() public {
         bytes memory args="0x123456";
-        ICallerImplementationMock(calleriMock).initialize(ccmp);
-        uint startInex = IEthCrossChainData(eccd).getEthTxHashIndex();
-        assertEq(0,IEthCrossChainData(eccd).getEthTxHash(startInex));
-        ICallerImplementationMock(callerp).lock(args);
-    }
+        uint txIndex = IEthCrossChainData(eccd).getEthTxHashIndex();
+        assertEq(0,txIndex);
+        // console.logBytes32(IEthCrossChainData(eccd).getEthTxHash(txIndex));
 
+        ICallerImplementationMock(callerp).lock(args);
+        
+        
+
+        uint newTxIndex = IEthCrossChainData(eccd).getEthTxHashIndex();
+        assertEq(1,newTxIndex);
+        // console.logBytes32(IEthCrossChainData(eccd).getEthTxHash(txIndex));
+    }
+    
+    function testCanNotCallCrossChainFromInvalidCaller() public {
+        bytes memory args="0x123456";
+        ICallerImplementationMock(calleriMock).initialize(ccmp);
+        vm.expectRevert(bytes("call ccm failed"));
+        ICallerImplementationMock(calleriMock).lock(args);
+    }
+    
+    // todo
+    // function testShouldSuccessInitGenesisblockAtUninitializedCCM() public {
+    //     bytes memory rawHeader = "";
+    //     assertEq(IEthCrossChainData(eccd).getCurEpochStartHeight(),0);
+    //     IEthCrossChainManagerImplementation(ccmi).initGenesisBlock(rawHeader);
+    //     assertEq(IEthCrossChainData(eccd).getCurEpochStartHeight(),1000);
+    //     console.log(IEthCrossChainData(eccd).getCurEpochValidatorPkBytes());
+    // }
+
+    // todo
+    // function testShouldFailInitGenesisblockAtInitializedCCM() public {
+    //     bytes memory rawHeader = "";
+    //     assertEq(IEthCrossChainData(eccd).getCurEpochStartHeight(),0);
+    //     IEthCrossChainManagerImplementation(ccmi).initGenesisBlock(rawHeader);
+    //     assertEq(IEthCrossChainData(eccd).getCurEpochStartHeight(),1000);
+    //     console.log(IEthCrossChainData(eccd).getCurEpochValidatorPkBytes());
+    // }
     
     
     

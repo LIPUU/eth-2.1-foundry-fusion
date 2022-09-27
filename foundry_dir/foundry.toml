@@ -4,4 +4,7 @@ out = './out'
 libs = ['lib']
 fs_permissions = [{ access = "read", path = "./"}]
 
+[rpc_endpoints]
+eth_mainnet = "https://eth-mainnet.g.alchemy.com/v2/9rUxUE8u95-3xT67PDmnqq4sKTC-I7hu"
+
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
