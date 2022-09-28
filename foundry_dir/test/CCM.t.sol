@@ -2,11 +2,7 @@
 pragma solidity ^0.8.0;
 import "test/helper.sol";
 
-//  In order to be compatible with the previous hardhat test, two paths must be manually modified here, 
-//  first is the scriptPath in CCM.t.sol to the absolute variable in the script.sh script, 
-//  second is absolute path of Const.sol has to be correct within the script.sh script 
 contract CCMTest is Test {
-    string scriptPath="/home/lipu/crossChain2.1_with_foundry/eth-contracts/foundry_dir/test/script.sh";
     address deployer=vm.addr(1);
     address addr1=vm.addr(11);
     address addr2=vm.addr(0x64);
@@ -27,8 +23,6 @@ contract CCMTest is Test {
         factory= deployCode("CallerFactory.sol",abi.encode(new address[](0)));
         
         ccmi = deployCode("EthCrossChainManagerImplementation.sol");
-
-        // new Helper().updateConst(eccd,factory,scriptPath);
 
         ccmp=deployCode("EthCrossChainManager.sol",abi.encode(ccmi,deployer,""));
         
