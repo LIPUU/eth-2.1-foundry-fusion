@@ -12,6 +12,10 @@ import "test/interface/ICallerImplementationMock_2.sol";
 import "test/interface/IEthCrossChainManager.sol";
 import "test/interface/IEthCrossChainManagerImplementation.sol";
 import "test/interface/ITunnelCCMCaller.sol";
+import "test/interface/IERC20.sol";
+import "test/interface/ILockProxy.sol";
+import "test/token/ERC20.sol";
+
 contract Helper is Test {
     function updateConst(address _eccdAddress, address _factoryAddress, string memory _scriptPath)  public {
         string memory eccdAddress=vm.toString(_eccdAddress);

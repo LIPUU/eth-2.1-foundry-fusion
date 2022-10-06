@@ -6,6 +6,7 @@ build
 hardhat.config.js
 
 foundry_dir/lib/forge-std
+foundry_dir/test/interact.t.sol
 
 node_modules
 /.project
