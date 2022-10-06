@@ -320,6 +320,18 @@ contract CCMTest is Test {
         assertEq(IERC20(NBCoin).balanceOf(address(0x0c888cca1190940ebC156d4Cf13cbF880A83E4A3)),1);
     }
 
+    function testShouldFailExecuteCrossTxExists() public {
+        setInitState();
+
+        IEthCrossChainManagerImplementation(ccmp).verifyHeaderAndExecuteTx(rawHeader,rawSeals,accountProof,storageProof,rawCrossTx);
+        assertEq(IERC20(NBCoin).balanceOf(targetChainLockProxy),999999);
+        assertEq(IERC20(NBCoin).balanceOf(address(0x0c888cca1190940ebC156d4Cf13cbF880A83E4A3)),1);
+
+        vm.expectRevert(bytes("the transaction has been executed!"));
+        IEthCrossChainManagerImplementation(ccmp).verifyHeaderAndExecuteTx(rawHeader,rawSeals,accountProof,storageProof,rawCrossTx);
+
+    }
+
     function testShouldFailExecuteCrossChainTxWithIncorrectHeader() public {
         setInitState();
         
@@ -360,4 +372,3 @@ contract CCMTest is Test {
         IEthCrossChainManagerImplementation(ccmp).verifyHeaderAndExecuteTx(rawHeader,rawSeals,accountProof,storageProof,incorrectCroosTx);
     }
 }
-
